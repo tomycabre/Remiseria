@@ -31,35 +31,37 @@
     <!--! MAIN -->
     <main>
       <h2>Remiseria Gordo</h2>
-      <p class="horarios">Horarios: 11pm - 7am (70 usd) 8am - 10pm (50 usd)</p>
+      <p class="horarios">
+        Time and prices: 11pm - 7am (70 usd) 8am - 10pm (50 usd)
+      </p>
       <p class="texto">
-        Si viajas con mas de una persona, por favor incluir los nombres
-        separados por coma.
+        If you are traveling with more than one person, please include their
+        names separated by a comma.
       </p>
       <form action=" " name="contact-us">
         <section class="left">
           <div class="input-container">
-            <label for="nombre">Nombre Completo</label>
+            <label for="nombre">Name and Surname</label>
             <input name="nombre" id="nombre" type="text" required />
           </div>
           <div class="input-container">
-            <label for="fecha">Fecha de Viaje</label>
+            <label for="fecha">Travel Date</label>
             <input name="fecha" id="fecha" type="date" required />
           </div>
           <div class="input-container">
             <label for="salida"
-              >Horario de Salida (escribir PM/AM despues de la hora)</label
-            >
+              >Time to leave campus (write PM/AM after the number)
+            </label>
             <input name="salida" id="salida" type="text" required />
           </div>
           <div class="input-container">
             <label for="vuelo"
-              >Horario de Vuelo (escribir PM/AM despues de la hora)</label
+              >Time of flight (write PM/AM after the number)</label
             >
             <input name="vuelo" id="vuelo" type="text" required />
           </div>
           <div class="input-container">
-            <label>Cantidad de Valijas (contando carry on)</label>
+            <label>Number of baggages (counting carry on)</label>
             <select name="select">
               <option value="una">1</option>
               <option value="dos" selected>2</option>
@@ -70,11 +72,11 @@
             </select>
           </div>
           <div class="input-container">
-            <label>Esperar unos segundos despues de apretar enviar.</label>
+            <label> PLEASE wait a few seconds after pressing send.</label>
           </div>
         </section>
-        <div class="send-container" style="margin-top: 3rem">
-          <input type="submit" value="Enviar" onclick="return true" />
+        <div class="send-container" style="margin-top: 3 rem">
+          <input type="submit" value="Send" onclick="return true" />
         </div>
       </form>
     </main>
