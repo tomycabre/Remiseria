@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background: #000;
+  font-family: "Raleway", sans-serif;
+  height: 100vh;
+  scroll-behavior: smooth;
+}
+
+body p {
+  font-weight: 500;
+}
+
+/*! MAIN */
+main {
+  margin-top: 4.2rem;
+}
+
+/** WHATSAPP LINK BUTTON */
+
+.btn-wsp {
+  position: fixed;
+  width: 4.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  bottom: 2rem;
+  right: 2rem;
+  background: #0fcd4b;
+  color: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 2rem;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}

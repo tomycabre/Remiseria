@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="//fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900,300italic,400italic|Montserrat:200,300,400,500,600,700,800,900,300italic,400italic&subset=latin,latin-ext"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/contactanos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image/x-icon" href="/css/images/IMG-4035.jpg" />
+    <title>Remiseria Gordo</title>
+  </head>
+  <body>
+    <!--? © 2022 Tomas Cabrera | Github: https://github.com/tomycabre | All Rights Reserved -->
+    <!--! MAIN -->
+    <main>
+      <h2>Remiseria Gordo</h2>
+      <p class="horarios">Horarios: 11pm - 7am (70 usd) 8am - 10pm (50 usd)</p>
+      <p class="texto">
+        Si viajas con mas de una persona, por favor incluir los nombres
+        separados por coma.
+      </p>
+      <form action=" " name="contact-us">
+        <section class="left">
+          <div class="input-container">
+            <label for="nombre">Nombre Completo</label>
+            <input name="nombre" id="nombre" type="text" required />
+          </div>
+          <div class="input-container">
+            <label for="fecha">Fecha de Viaje</label>
+            <input name="fecha" id="fecha" type="date" required />
+          </div>
+          <div class="input-container">
+            <label for="salida"
+              >Horario de Salida (escribir PM/AM despues de la hora)</label
+            >
+            <input name="salida" id="salida" type="text" required />
+          </div>
+          <div class="input-container">
+            <label for="vuelo"
+              >Horario de Vuelo (escribir PM/AM despues de la hora)</label
+            >
+            <input name="vuelo" id="vuelo" type="text" required />
+          </div>
+          <div class="input-container">
+            <label>Cantidad de Valijas (contando carry on)</label>
+            <select name="select">
+              <option value="una">1</option>
+              <option value="dos" selected>2</option>
+              <option value="tres">3</option>
+              <option value="cuatro">4</option>
+              <option value="cinco">5</option>
+              <option value="seis">6</option>
+            </select>
+          </div>
+        </section>
+        <div class="send-container">
+          <input type="submit" value="Enviar" onclick="return true" />
+        </div>
+      </form>
+    </main>
+    <!--? © 2022 Tomas Cabrera | Github: https://github.com/tomycabre | All Rights Reserved -->
+    <!--? © 2022 Tomas Cabrera. | Github: https://github.com/tomycabre | All Rights Reserved -->
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzqgW8G8MCUe4VlvcMMUTUX5LIBex6kXRgcwsvae8cem7xSD6xNXHj6QvMcyX_5NFZT7w/exec";
+      const form = document.forms["contact-us"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            form.reset();
+            alert(
+              "Gracias por reservar tu horario, el gordo se va a comunicar para arreglar todo durante estos dias."
+            );
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
+  </body>
+</html>
